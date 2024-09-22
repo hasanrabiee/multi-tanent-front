@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useFetchBlogs } from "@/hooks/blogs/useFetchBlogs"; // Import your custom hook
+import { useFetchBlogs } from "@/hooks/blogs/useFetchBlogs"; 
 import PostsTable from "@/components/dashboard/utils/table/BlogTable";
 import Cookies from "js-cookie";
 import { TENANT_ID } from "@/utils/constants/constants";

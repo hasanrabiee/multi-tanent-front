@@ -40,7 +40,9 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
 
   // Login function
   const login = () => {
-    setIsLoggedIn(true); // Update login state
+    if (Cookies.get(TOKEN_KEY)) {
+      setIsLoggedIn(true); // Update login state
+    }
   };
 
   // Logout function

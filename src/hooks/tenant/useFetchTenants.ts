@@ -14,7 +14,7 @@ export const useFetchTenants = () => {
 
     try {
       //   alert("test");
-      const response = await API.get<TenantResponse[]>("api/tenants"); // Adjust the endpoint if necessary
+      const response = await API.get<TenantResponse[]>("api/tenants"); 
       setTenants(response.data);
     } catch (err) {
       const axiosError = err as AxiosError<{ error: string }>;

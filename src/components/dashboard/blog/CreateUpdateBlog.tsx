@@ -16,7 +16,7 @@ const CreateEditPost = ({
   initialData,
 }: {
   tenantId: string;
-  initialData?: PostData; // Optional: if provided, this is for editing
+  initialData?: PostData; 
 }) => {
   const [title, setTitle] = useState<string>(initialData?.title || "");
   const [text, setText] = useState<string>(initialData?.body || "");

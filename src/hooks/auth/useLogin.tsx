@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  { AxiosError } from "axios";
+import { AxiosError } from "axios";
 import { toast } from "react-toastify";
 import generateTenantApi from "@/utils/request/TenantApi";
 import { LoginResponse } from "../types/loginResponse.types";
@@ -28,10 +28,11 @@ export const useTenantLogin = (tenantId: string) => {
         token,
         user: { role },
       } = response.data;
-      Cookies.set(TOKEN_KEY, token);
-      Cookies.set(ROLE_KEY, role);
-      Cookies.set(TENANT_ID, tenantId);
-
+      if (token) {
+        Cookies.set(TOKEN_KEY, token);
+        Cookies.set(ROLE_KEY, role);
+        Cookies.set(TENANT_ID, tenantId);
+      }
       toast.success("Login successful");
       if (role === "admin") {
         router.push("/dashboard"); // Redirect admin to dashboard

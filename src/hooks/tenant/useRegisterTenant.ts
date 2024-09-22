@@ -13,7 +13,7 @@ export const useRegisterTenant = () => {
   const registerTenant = async (tenantName: string) => {
     setLoading(true);
     setError(null);
-    setIsSuccess(false); // Reset success status before starting a new request
+    setIsSuccess(false); 
 
     try {
       const response = await API.post<TenantResponse>("api/tenants", {

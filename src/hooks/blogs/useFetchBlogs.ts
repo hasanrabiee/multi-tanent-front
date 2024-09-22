@@ -21,7 +21,7 @@ export const useFetchBlogs = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await API.get<Blog[]>("/posts"); // Assuming the API endpoint is 'api/blogs'
+      const response = await API.get<Blog[]>("/posts"); 
       setBlogs(response.data);
     } catch (err) {
       const axiosError = err as AxiosError;

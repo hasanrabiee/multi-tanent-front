@@ -17,7 +17,7 @@ const CreateUpdateRulePage = ({
   initialData,
 }: {
   tenantId: string;
-  initialData?: RuleData; // Optional: if provided, this is for editing
+  initialData?: RuleData; 
 }) => {
   const [country, setCountry] = useState<string>(initialData?.country || "");
   const [message, setMessage] = useState<string>(initialData?.message || "");
