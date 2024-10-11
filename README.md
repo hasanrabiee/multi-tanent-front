@@ -1,4 +1,4 @@
-# Brink Multi-Tenant Frontend (Next.js)
+#  Multi-Tenant Frontend (Next.js)
 
 This repository contains the frontend built with **Next.js** for the Brink Multi-Tenant application. It is designed to work alongside the backend built with **Laravel**. The frontend handles tenant-specific features, user authentication, and post management through API interactions with the Laravel backend.
 
